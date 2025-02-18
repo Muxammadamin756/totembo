@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Totembo</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+	<!-- CART MODAL START -->
+	<aside class="cart">
+		<div class="cart__modal">
+			<div class="cart__modal-top">
+				<h2 class="cart__modal-title" data-lang="lang-cartModalTitle">Cart</h2>
+				<button class=" cart__modal-close">
+					<i class="fa-solid fa-xmark fa-xl"></i>
+				</button>
+			</div>
+
+			<ul class="cart__modal-list"></ul>
+
+			<div class="cart__modal-bottom">
+				<span class="cart__modal-bottom-text" data-lang="lang-cartModalBottomTotal">Total</span>
+				<span class=" cart__modal-bottom-price">0</span>
+			</div>
+		</div>
+	</aside>
+	<!-- CART MODAL END -->
+
+	<!-- FAVOURITE MODAL END -->
+	<aside class="favourite">
+		<div class="favourite__modal">
+			<div class="favourite__modal-top">
+				<h2 class="favourite__modal-title" data-lang="lang-favouriteModalTitle">Favorites</h2>
+				<button class="favourite__modal-close">
+					<i class="fa-solid fa-xmark fa-xl"></i>
+				</button>
+			</div>
+
+			<ul class="favourite__modal-list"></ul>
+		</div>
+	</aside>
+	<!-- FAVOURITE MODAL END -->
+
+	<!-- HEADER START -->
+	<header class="header">
+		<div class="container">
+			<nav class="header__nav">
+				<a class="header__nav-logo" href="index.html">Totembo</a>
+
+				<ul class="header__nav-list">
+					<li class="header__nav-item">
+						<a class="header__nav-link" href="#" id="lang-headerNavLinkWatches">
+							Watches
+						</a>
+					</li>
+					<li class="header__nav-item">
+						<a class="header__nav-link" href="#" id="lang-headerNavLinkRings">
+							Rings
+						</a>
+					</li>
+					<li class="header__nav-item">
+						<a class="header__nav-link" href="#" id="lang-headerNavLinkEarrings">
+							Earrings
+						</a>
+					</li>
+					<li class="header__nav-item">
+						<a class="header__nav-link" href="#" id="lang-headerNavLinkBracelets">
+							Bracelets
+						</a>
+					</li>
+					<li class="header__nav-item">
+						<a class="header__nav-link" href="#" id="lang-headerNavLinkChains">
+							Chains
+						</a>
+					</li>
+				</ul>
+
+				<div class="header__wrapper">
+					<select class="header__wrapper-select" name="language">
+						<option value="en" lang="en" selected>EN</option>
+						<option value="ru" lang="ru">RU</option>
+						<option value="uz" lang="uz">UZ</option>
+					</select>
+					<button class="header__wrapper-btn favourite__modal-open">
+						<span class="header__wrapper-favourite-count">0</span>
+						<i class="fa-regular fa-heart fa-xl"></i>
+					</button>
+					<button class="header__wrapper-btn cart__modal-open">
+						<span class="header__wrapper-cart-count">0</span>
+						<i class="fa-solid fa-cart-shopping fa-xl"></i>
+					</button>
+					<button class="header__wrapper-btn">
+						<i class="fa-regular fa-user fa-xl"></i>
+					</button>
+					<button class="header__wrapper-btn">
+						<i class="fa-solid fa-magnifying-glass fa-xl"></i>
+					</button>
+					<button class="header__wrapper-btn-menu">
+						<i class="fa-solid fa-bars fa-xl"></i>
+					</button>
+				</div>
+			</nav>
+			<hr class="site__line">
+
+			<div class="header__hero">
+				<div class="header__hero-item">
+					<img class="header__hero-img" width="146" height="174" src="./assets/images/hero-1.png"
+						alt="Hero image">
+					<span class="header__hero-discount">50%</span>
+
+					<div class="header__hero-info">
+						<h2 class="header__hero-info-title" data-lang="lang-heroTitleWatch">
+							Men's watch
+						</h2>
+						<p class="header__hero-info-brand subtitle-1">Pierre Lannier</p>
+						<p class="header__hero-info-price" data-lang="lang-heroPrice1">
+							102 USD
+						</p>
+					</div>
+				</div>
+				<div class="header__hero-item">
+					<img class="header__hero-img" width="146" height="174" src="./assets/images/hero-2.png" alt="Hero image>
+					<span>20%</span>
+
+					<div class=" header__hero-info">
+					<h2 class="header__hero-info-title" data-lang="lang-heroTitleWatch">
+						Men's watch
+					</h2>
+					<p class="header__hero-info-brand subtitle-2">
+						Swiss Military Chrono
+					</p>
+					<p class="header__hero-info-price" data-lang="lang-heroPrice1">
+						119 USD
+					</p>
+				</div>
+				<div class="header__hero-item">
+					<img class="header__hero-img" width="306" height="242" src="./assets/images/hero-3.png"
+						alt="Hero image">
+					<span class="header__hero-discount">50%</span>
+
+					<div class="header__hero-info">
+						<h2 class="header__hero-info-title" data-lang="lang-heroTitleEarring">
+							Black men's earring
+						</h2>
+						<p class="header__hero-info-brand subtitle-3">Diadema Grand</p>
+						<p class="header__hero-info-price" data-lang="lang-heroPrice1">7 USD</p>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+		<div class="hidden-header__nav">
+			<button class="header__wrapper-btn-close"></button>
+			<ul class="hidden-header__nav-list">
+				<li class="hidden-header__nav-item">
+					<a class="hidden-header__nav-link" href="#" data-lang="headerNavLinkWatches">
+						Watches
+					</a>
+				</li>
+				<li class="hidden-header__nav-item">
+					<a class="hidden-header__nav-link" href="#" data-lang="headerNavLinkRings">
+						Rings
+					</a>
+				</li>
+				<li class="hidden-header__nav-item">
+					<a class="hidden-header__nav-link" href="#" data-lang="headerNavLinkEarrings">
+						Earrings
+					</a>
+				</li>
+				<li class="hidden-header__nav-item">
+					<a class="hidden-header__nav-link" href="#" data-lang="headerNavLinkBracelets">
+						Bracelets
+					</a>
+				</li>
+				<li class="hidden-header__nav-item">
+					<a class="hidden-header__nav-link" href="#" data-lang="headerNavLinkChains">
+						Chains
+					</a>
+				</li>
+			</ul>
+
+			<div class="hidden-header__wrapper">
+				<button class="hidden-header__wrapper-btn">
+					<i class="fa-regular fa-heart fa-xl"></i>
+				</button>
+				<button class="hidden-header__wrapper-btn">
+					<i class="fa-solid fa-cart-shopping fa-xl"></i>
+				</button>
+				<button class="hidden-header__wrapper-btn">
+					<i class="fa-regular fa-user fa-xl"></i>
+				</button>
+				<button class="hidden-header__wrapper-btn">
+					<i class="fa-solid fa-magnifying-glass fa-xl"></i>
+				</button>
+			</div>
+		</div>
+		</div>
+	</header>
+	<!-- HEADER END -->
+
+	<!-- MAIN START -->
+	<main class="main">
+		<section class="products">
+			<div class="container">
+				<h2 class="product__title" data-lang="productTitle">
+					Leaders of sells
+				</h2>
+				<hr class="site__line">
+
+				<ul class="product__list">
+					<li class="product__item">
+						<div class="product__link" id="cartier">
+							<span class="product__link-discount" data-lang="productDiscount">New</span>
+
+							<div class="product__link-btns">
+								<button class="product__link-btn favourite-btn">
+									<i class="fa-solid fa-heart fa-xl"></i>
+								</button>
+								<button class="product__link-btn cart-btn">
+									<i class="fa-solid fa-cart-shopping fa-xl"></i>
+								</button>
+							</div>
+
+							<div class="product__info">
+								<img class="product__info-img" src="./assets/images/product-1.png" width="200"
+									height="243" alt="Cartier watch image">
+								<h3 class="product__info-title" data-lang="productInfoWatches">
+									Men's watch
+								</h3>
+								<h4 class="product__info-brand">Cartier</h4>
+								<p class="product__info-price" data-lang="productInfoPrice1">
+									103 USD
+								</p>
+							</div>
+						</div>
+					</li>
+					<li class="product__item">
+						<div class="product__link" id="audemars">
+							<span class="product__link-discount">15%</span>
+
+							<div class="product__link-btns">
+								<button class="product__link-btn favourite-btn">
+									<i class="fa-solid fa-heart fa-xl"></i>
+								</button>
+								<button class="product__link-btn cart-btn">
+									<i class="fa-solid fa-cart-shopping fa-xl"></i>
+								</button>
+							</div>
+
+							<div class="product__info">
+								<img class="product__info-img" src="./assets/images/product-2.png" width="200"
+									height="243" alt="Audemars Piguet watch image">
+								<h3 class="product__info-title" data-lang="productInfoWatches">
+									Men's watch
+								</h3>
+								<h4 class="product__info-brand">Audemars Piguet</h4>
+								<p class="product__info-price" data-lang="productInfoPrice2">
+									113 USD
+								</p>
+							</div>
+						</div>
+					</li>
+					<li class="product__item">
+						<div class="product__link" id="tag">
+							<span class="product__link-discount">30%</span>
+
+							<div class="product__link-btns">
+								<button class="product__link-btn favourite-btn">
+									<i class="fa-solid fa-heart fa-xl"></i>
+								</button>
+								<button class="product__link-btn cart-btn">
+									<i class="fa-solid fa-cart-shopping fa-xl"></i>
+								</button>
+							</div>
+
+							<div class="product__info">
+								<img class="product__info-img" src="./assets/images/product-3.png" width="200"
+									height="243" alt="Tag Heuer Carrera Space watch image">
+								<h3 class="product__info-title" data-lang="productInfoWatches">
+									Men's watch
+								</h3>
+								<h4 class="product__info-brand">Tag Heuer Carrera Space</h4>
+								<p class="product__info-price" data-lang="productInfoPrice3">
+									89 USD
+								</p>
+							</div>
+						</div>
+					</li>
+					<li class="product__item">
+						<div class="product__link" id="duchen">
+							<span class="product__link-discount">10%</span>
+
+							<div class="product__link-btns">
+								<button class="product__link-btn favourite-btn">
+									<i class="fa-solid fa-heart fa-xl"></i>
+								</button>
+								<button class="product__link-btn cart-btn">
+									<i class="fa-solid fa-cart-shopping fa-xl"></i>
+								</button>
+							</div>
+
+							<div class="product__info">
+								<img class="product__info-img" src="./assets/images/product-4.png" width="200"
+									height="243" alt="L Duchen watch image">
+								<h3 class="product__info-title" data-lang="productInfoWatches">
+									Men's watch
+								</h3>
+								<h4 class="product__info-brand">L Duchen</h4>
+								<p class="product__info-price" data-lang="productInfoPrice4">
+									75 USD
+								</p>
+							</div>
+						</div>
+					</li>
+					<li class="product__item">
+						<div class="product__link" id="rolex">
+							<span class="product__link-discount not__discount">10%</span>
+
+							<div class="product__link-btns">
+								<button class="product__link-btn favourite-btn">
+									<i class="fa-solid fa-heart fa-xl"></i>
+								</button>
+								<button class="product__link-btn cart-btn">
+									<i class="fa-solid fa-cart-shopping fa-xl"></i>
+								</button>
+							</div>
+
+							<div class="product__info">
+								<img class="product__info-img" src="./assets/images/product-5.png" width="200"
+									height="243" alt="Rolex watch image">
+								<h3 class="product__info-title" data-lang="productInfoWatches">
+									Men's watch
+								</h3>
+								<h4 class="product__info-brand">Rolex</h4>
+								<p class="product__info-price" data-lang="productInfoPrice5">
+									195 USD
+								</p>
+							</div>
+						</div>
+					</li>
+					<li class="product__item">
+						<div class="product__link" id="spikes">
+							<span class="product__link-discount not__discount">10%</span>
+
+							<div class="product__link-btns">
+								<button class="product__link-btn favourite-btn">
+									<i class="fa-solid fa-heart fa-xl"></i>
+								</button>
+								<button class="product__link-btn cart-btn">
+									<i class="fa-solid fa-cart-shopping fa-xl"></i>
+								</button>
+							</div>
+
+							<div class="product__info">
+								<img class="product__info-img" src="./assets/images/product-6.png" width="200"
+									height="243" alt="Spikes ring image">
+								<h3 class="product__info-title" id="lang-productInfoRings">
+									Men's ring
+								</h3>
+								<h4 class="product__info-brand">Spikes</h4>
+								<p class="product__info-price" id="lang-productInfoPrice6">
+									115 USD
+								</p>
+							</div>
+						</div>
+					</li>
+					<li class="product__item">
+						<div class="product__link" id="pierre">
+							<span class="product__link-discount">50%</span>
+
+							<div class="product__link-btns">
+								<button class="product__link-btn favourite-btn">
+									<i class="fa-solid fa-heart fa-xl"></i>
+								</button>
+								<button class="product__link-btn cart-btn">
+									<i class="fa-solid fa-cart-shopping fa-xl"></i>
+								</button>
+							</div>
+
+							<div class="product__info">
+								<img class="product__info-img" src="./assets/images/product-7.png" width="200"
+									height="243" alt="Pierre Lannier watch image">
+								<h3 class="product__info-title" data-lang="productInfoWatches">
+									Men's watch
+								</h3>
+								<h4 class="product__info-brand">Pierre Lannier</h4>
+								<p class="product__info-price" data-lang="productInfoPrice7">
+									102 USD
+								</p>
+							</div>
+						</div>
+					</li>
+					<li class="product__item">
+						<div class="product__link" id="tiamo">
+							<span class="product__link-discount">20%</span>
+
+							<div class="product__link-btns">
+								<button class="product__link-btn favourite-btn">
+									<i class="fa-solid fa-heart fa-xl"></i>
+								</button>
+								<button class="product__link-btn cart-btn">
+									<i class="fa-solid fa-cart-shopping fa-xl"></i>
+								</button>
+							</div>
+
+							<div class="product__info">
+								<img class="product__info-img" src="./assets/images/product-8.png" width="200"
+									height="243" alt="Tiamo ring image">
+								<h3 class="product__info-title" data-lang="productInfoRings">
+									Men's ring
+								</h3>
+								<h4 class="product__info-brand">TIAMO</h4>
+								<p class="product__info-price" data-lang="productInfoPrice8">
+									89 USD
+								</p>
+							</div>
+						</div>
+					</li>
+					<li class="product__item">
+						<div class="product__link" id="tag2">
+							<span class="product__link-discount">30%</span>
+
+							<div class="product__link-btns">
+								<button class="product__link-btn favourite-btn">
+									<i class="fa-solid fa-heart fa-xl"></i>
+								</button>
+								<button class="product__link-btn cart-btn">
+									<i class="fa-solid fa-cart-shopping fa-xl"></i>
+								</button>
+							</div>
+
+							<div class="product__info">
+								<img class="product__info-img" src="./assets/images/product-9.png" width="200"
+									height="243" alt="Tag Heuer Carrera Space watch image">
+								<h3 class="product__info-title" data-lang="productInfoWatches">
+									Men's watch
+								</h3>
+								<h4 class="product__info-brand">Tag Heuer Carrera Space</h4>
+								<p class="product__info-price" data-lang="productInfoPrice9">
+									89 USD
+								</p>
+							</div>
+						</div>
+					</li>
+					<li class="product__item">
+						<div class="product__link" id="montblanc">
+							<span class="product__link-discount not__discount">30%</span>
+
+							<div class="product__link-btns">
+								<button class="product__link-btn favourite-btn">
+									<i class="fa-solid fa-heart fa-xl"></i>
+								</button>
+								<button class="product__link-btn cart-btn">
+									<i class="fa-solid fa-cart-shopping fa-xl"></i>
+								</button>
+							</div>
+
+							<div class="product__info">
+								<img class="product__info-img" src="./assets/images/product-10.png" width="200"
+									height="243" alt="Montblanc bracelet image">
+								<h3 class="product__info-title" data-lang="productInfoBracelets">
+									Men's bracelet
+								</h3>
+								<h4 class="product__info-brand">Montblanc</h4>
+								<p class="product__info-price" data-lang="productInfoPrice10">
+									67 USD
+								</p>
+							</div>
+						</div>
+					</li>
+					<li class="product__item">
+						<div class="product__link" id="jaeger">
+							<span class="product__link-discount">10%</span>
+
+							<div class="product__link-btns">
+								<button class="product__link-btn favourite-btn">
+									<i class="fa-solid fa-heart fa-xl"></i>
+								</button>
+								<button class="product__link-btn cart-btn">
+									<i class="fa-solid fa-cart-shopping fa-xl"></i>
+								</button>
+							</div>
+
+							<div class="product__info">
+								<img class="product__info-img" src="./assets/images/product-11.png" width="200"
+									height="243" alt="Jaeger-LeCoultre watch image">
+								<h3 class="product__info-title" data-lang="productInfoWatches">
+									Men's watch
+								</h3>
+								<h4 class="product__info-brand">Jaeger-LeCoultre</h4>
+								<p class="product__info-price" data-lang="productInfoPrice11">
+									195 USD
+								</p>
+							</div>
+						</div>
+					</li>
+					<li class="product__item">
+						<div class="product__link" id="hockey">
+							<span class="product__link-discount not__discount">10%</span>
+
+							<div class="product__link-btns">
+								<button class="product__link-btn favourite-btn">
+									<i class="fa-solid fa-heart fa-xl"></i>
+								</button>
+								<button class="product__link-btn cart-btn">
+									<i class="fa-solid fa-cart-shopping fa-xl"></i>
+								</button>
+							</div>
+
+							<div class="product__info">
+								<img class="product__info-img" src="./assets/images/product-12.png" width="200"
+									height="243" alt="Hockey bracelet image">
+								<h3 class="product__info-title" data-lang="productInfoBracelets">
+									Men's bracelet
+								</h3>
+								<h4 class="product__info-brand">HOCKEY</h4>
+								<p class="product__info-price" data-lang="productInfoPrice12">
+									59 USD
+								</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+				<button class="product__btn" data-lang="productBtn">More</button>
+			</div>
+		</section>
+
+		<section class="news">
+			<div class="container">
+				<h2 class="news__title" data-lang="newsTitle">Latest news</h2>
+				<hr class="site__line" />
+
+				<ul class="news__blog-list">
+					<li class="news__blog-item">
+						<a class="news__blog-link news__blog-bg-1" href="#">
+							<span class="news__blog-recommend" data-lang="newsBlogRecommends">Recommends</span>
+							<h3 class="news__blog-title" data-lang="newsBlogTitle1">
+								How to choose the first Japanese watch - tips from the
+							</h3>
+							<p class="news__blog-desc" id="lang-newsBlogDescription">
+								When thinking about what kind of Japanese watch to buy, you
+								should keep this in mind following figures: in Japan there are
+								about 2,800 companies, one way or another related to the
+								temporary...
+							</p>
+
+							<div class="news__blog-date">
+								<i class="news__blog-date-img fa-regular fa-clock fa-lg"></i>
+								<time class="news__blog-date-time" datetime="2021-04-19">
+									19.04.2021 | 17:30
+								</time>
+							</div>
+						</a>
+					</li>
+					<li class="news__blog-item">
+						<a class="news__blog-link news__blog-bg-2" href="#">
+							<span class="news__blog-recommend" data-lang="newsBlogRecommends">Recommends</span>
+							<h3 class="news__blog-title" data-lang="newsBlogTitle1">
+								HAIQIN Men's Luxury Mechanical Watches
+							</h3>
+							<p class="news__blog-desc" da data-lang-lnewsBlogDescription">
+								Waterproof tourbillon watch men's automatic watch - buy online
+								with decent worldwide delivery!
+							</p>
+
+							<div class="news__blog-date">
+								<i class="news__blog-date-img fa-regular fa-clock fa-lg"></i>
+								<time class="news__blog-date-time" datetime="2021-04-19">
+									20.05.2021 | 18:30
+								</time>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</main>
+	<!-- MAIN END -->
+
+	<!-- FOOTER START -->
+	<footer class="footer">
+		<div class="container">
+			<nav class="footer__nav">
+				<div class="footer__content">
+					<a class="footer__logo" href="index.html">Totembo</a>
+
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a class="footer__link" href="#" data-lang="footerLinkDiscount">Discounts</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#" data-lang="footerLinkBlog">Blog</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#" data-lang="footerLinkFaq">FAQ</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#" data-lang="footerLinkDelivery">Delivery</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#" data-lang="footerLinkWarranty">Warranty</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#" data-lang="footerLinkReturns">Returns</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="footer__content">
+					<h2 class="footer__title" data-lang="footerTitleProducts">Products</h2>
+
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a class="footer__link" href="#" data-lang="footerLinkWatches">Watches</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#" data-lang="footerLinkRings">Rings</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#" data-lang="footerLinkEarrings">Earrings</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#" data-lang="footerLinkBracelets">Bracelets</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#" data-lang="footerLinkClutches">Clutches</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#" data-lang="footerLinkChains">Chains</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="footer__content footer__content--contacts">
+					<h2 class="footer__title" id="lang-footerTitleContacts">Contacts</h2>
+
+					<ul class="footer__list">
+
+
+						<li class="footer__item footer__item--phone">
+							<a class="footer__link" href="tel:+998 977777797" target="_blank">
+								+998 97 777 77 97
+							</a>
+							<a class="footer__link" href="tel:+998977777997" target="_blank">
+								+998 97 777 79 97
+							</a>
+						</li>
+						<li class="footer__item">
+							<address class="footer__address" id="lang-footerAddress">
+								St. Askiya, Yakkasaray district, Tashkent, Uzbekistan
+							</address>
+							<a class="footer__link footer__link--mail" href="mailto:totembo@exapmle.com"
+								target="_blank">
+								totembo@exapmle.com
+							</a>
+						</li>
+					</ul>
+
+					<div class="footer__socials">
+						<h3 class="footer__socials-title" id="lang-footerSocialsTitle">Socials Media</h3>
+
+						<ul class="footer__socials-list">
+							<li class="foooter__socials-item">
+								<a class="footer__socials-link" href="#">
+									<i class="fa-brands fa-square-facebook fa-2xl"></i>
+								</a>
+							</li>
+							<li class="foooter__socials-item">
+								<a class="footer__socials-link" href="#">
+									<i class="fa-brands fa-square-instagram fa-2xl"></i>
+								</a>
+							</li>
+							<li class="foooter__socials-item">
+								<a class="footer__socials-link" href="#">
+									<i class="fa-brands fa-square-twitter fa-2xl"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</footer>
+	<!-- FOOTER END -->
+
+	<script src="/js/main.js"></script>
+	<script src="/js/language.js"></script>
+	<script src="/js/all.min.js"></script>
+</body>
+
+</html>
