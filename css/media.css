@@ -3,6 +3,13 @@
 	.header__wrapper {
 		gap: 35px;
 	}
+	.news__blog-list {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.news__blog-link {
+		width: 100%;
+	}
 	.header__hero {
 		grid-template-columns: repeat(1, 48%);
 		grid-template-rows: repeat(1, 1fr);
@@ -161,10 +168,16 @@
 	.product__info-img {
 		width: 140px;
 	}
-	
+
 	.news__blog-recommend {
 		font-size: 18px;
 		padding: 13px 20px;
+	}
+	.news__blog-desc {
+		margin-bottom: 30px;
+		-webkit-line-clamp: 4;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
 	}
 }
 
