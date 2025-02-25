@@ -191,8 +191,8 @@ const languageArr = {
 	// NEWS BLOG DESCRIPTION
 	newsBlogDescription: {
 		en: 'When thinking about what kind of Japanese watch to buy, you should keep this in mind following figures: in Japan there are about 2,800 companies, one way or another related to the temporary...',
-    ru: 'Задумавшись о том, какие японские часы приобрести, следует держать в уме следующие цифры: в Японии существуют около 2800 фирм, так или иначе связанных с часовым...',
-    uz: "Qanday yapon soatlarini sotib olish haqida o'ylayotganda, buni yodda tutishingiz kerak quyidagi raqamlar: Yaponiyada 2800 ga yaqin kompaniya bor, u yoki bu vaqtinchalik...",
+		ru: 'Задумавшись о том, какие японские часы приобрести, следует держать в уме следующие цифры: в Японии существуют около 2800 фирм, так или иначе связанных с часовым...',
+		uz: "Qanday yapon soatlarini sotib olish haqida o'ylayotganda, buni yodda tutishingiz kerak quyidagi raqamlar: Yaponiyada 2800 ga yaqin kompaniya bor, u yoki bu vaqtinchalik...",
 	},
 	// FOOTER LINKS 
 	footerLinkDiscount: {
@@ -268,14 +268,14 @@ const languageArr = {
 		uz: 'Zanjirlar',
 	},
 	// FOOTER ADDRESS
-  footerAddress: {
-    en: 'St. Askiya, Yakkasaray district, Tashkent, Uzbekistan',
-		ru: 'Ул. Аския, Яккасарайский район, Ташкент, Узбекистан',
-		uz: "Ko'ch. Askiya, Yakkasaroy tumani, Toshkent, O'zbekiston",
-  },
-  footerSocialsTitle: {
-    en: 'Social Media',
-    ru: 'Социальные сети',
-    uz: 'Ijtimoiy tarmoqlar',
-  },
+	footerAddress: {
+		en: 'St. Askiya, Yakkasaray district, Tashkent, Uzbekistan',
+		ru: 'Ул заргалдок район Узбекистан',
+		uz: "zargaldog kochasi, Yangiyol shahar, Toshkent, O'zbekiston",
+	},
+	footerSocialsTitle: {
+		en: 'Social Media',
+		ru: 'Социальные сети',
+		uz: 'Ijtimoiy tarmoqlar',
+	},
 }

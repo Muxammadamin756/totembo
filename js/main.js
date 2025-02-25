@@ -142,40 +142,39 @@ document.addEventListener('DOMContentLoaded', function () {
 			)
 		})
 
+
 	// **Mahsulot modallarini yaratish**
 	const createCartItem = item => ` 
-		<li class="cart__modal-item">
-			<div class="cart__modal-item-info">
-				<img src="${item.img}" width="70" height="80" alt="${item.name}" />
-				<div class="cart__modal-item-name">
-					<h3 class="cart__modal-item-brand">${item.name}</h3>
-					<span class="cart__modal-item-price">${item.count * item.price}</span>
-				</div>
-			</div>
-			<div class="cart__modal-item-count">
-				<button class="cart__modal-item-btn minus" data-id="${
-					item.name
-				}" data-action="-">-</button>
-				<span class="cart__modal-item-counter">${item.count}</span>
-				<button class="cart__modal-item-btn plus" data-id="${
-					item.name
-				}" data-action="+">+</button>
-			</div>
-		</li>`
+    <li class="cart__modal-item">
+      <div class="cart__modal-item-info">
+        <img src="${item.img}" width="70" height="80" alt="${item.name}" />
+        <div class="cart__modal-item-name">
+          <h3 class="cart__modal-item-brand">${item.name}</h3>
+          <span class="cart__modal-item-price">${item.count * item.price}</span>
+        </div>
+      </div>
+      <div class="cart__modal-item-count">
+        <button class="cart__modal-item-btn minus" data-id="${item.name
+		}" data-action="-">-</button>
+        <span class="cart__modal-item-counter">${item.count}</span>
+        <button class="cart__modal-item-btn plus" data-id="${item.name
+		}" data-action="+">+</button>
+      </div>
+    </li>`
 
 	const createFavouriteItem = item => `
-		<li class="favourite__modal-item">
-			<div class="favourite__modal-item-info">
-				<img src="${item.img}" width="70" height="80" alt="${item.name}" />
-				<div class="cart__modal-item-name">
-					<h3 class="favourite__modal-item-brand">${item.name}</h3>
-					<span class="favourite__modal-item-price">${item.price}</span>
-				</div>
-			</div>
-			<button class="favourite__modal-item-btn">
-				<i class="fa-solid fa-heart fa-xl"></i>
-			</button>
-		</li>`
+    <li class="favourite__modal-item">
+      <div class="favourite__modal-item-info">
+        <img src="${item.img}" width="70" height="80" alt="${item.name}" />
+        <div class="cart__modal-item-name">
+          <h3 class="favourite__modal-item-brand">${item.name}</h3>
+          <span class="favourite__modal-item-price">${item.price}</span>
+        </div>
+      </div>
+      <button class="favourite__modal-item-btn">
+        <i class="fa-solid fa-heart fa-xl"></i>
+      </button>
+    </li>`
 
 	// **Hisoblash funksiyalari**
 	const totalSum = () =>
@@ -236,17 +235,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// **Tilni yangilash funksiyasi**
-	const allLang = ['en', 'ru', 'uz']
+	const allLang = ['en', 'ru', 'uz'];
 
 	function updateLanguage(lang) {
 		if (!allLang.includes(lang)) lang = 'en'
 		localStorage.setItem('language', lang)
 		elements.selectLang.value = lang
 
-		document.querySelectorAll('[id^="lang-"]').forEach(el => {
-			const key = el.id.replace('lang-', '') // Split ishlatmaslik uchun oddiy string olamiz
-			const translation = languageArr[key] // To'g'ridan-to'g'ri key bo'yicha izlaymiz
-			
+		document.querySelectorAll('[data-lang]').forEach(el => {
+			const key = el.dataset.lang
+			const translation = languageArr[key]
+
 			if (translation?.[lang]) {
 				el.textContent = translation[lang]
 			}

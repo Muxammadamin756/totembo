@@ -5,6 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Totembo</title>
+	<link rel="icon" type="images/png" href="favicon.svg">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/media.css">
 </head>
@@ -14,7 +15,7 @@
 	<aside class="cart">
 		<div class="cart__modal">
 			<div class="cart__modal-top">
-				<h2 class="cart__modal-title" data-lang="lang-cartModalTitle">Cart</h2>
+				<h2 class="cart__modal-title" data-lang="cartModalTitle">Cart</h2>
 				<button class=" cart__modal-close">
 					<i class="fa-solid fa-xmark fa-xl"></i>
 				</button>
@@ -23,7 +24,7 @@
 			<ul class="cart__modal-list"></ul>
 
 			<div class="cart__modal-bottom">
-				<span class="cart__modal-bottom-text" data-lang="lang-cartModalBottomTotal">Total</span>
+				<span class="cart__modal-bottom-text" data-lang="cartModalBottomTotal">Total</span>
 				<span class=" cart__modal-bottom-price">0</span>
 			</div>
 		</div>
@@ -34,7 +35,7 @@
 	<aside class="favourite">
 		<div class="favourite__modal">
 			<div class="favourite__modal-top">
-				<h2 class="favourite__modal-title" data-lang="lang-favouriteModalTitle">Favorites</h2>
+				<h2 class="favourite__modal-title" data-lang="favouriteModalTitle">Favorites</h2>
 				<button class="favourite__modal-close">
 					<i class="fa-solid fa-xmark fa-xl"></i>
 				</button>
@@ -53,27 +54,27 @@
 
 				<ul class="header__nav-list">
 					<li class="header__nav-item">
-						<a class="header__nav-link" href="#" id="lang-headerNavLinkWatches">
+						<a class="header__nav-link" href="#" data-lang="headerNavLinkWatches">
 							Watches
 						</a>
 					</li>
 					<li class="header__nav-item">
-						<a class="header__nav-link" href="#" id="lang-headerNavLinkRings">
+						<a class="header__nav-link" href="#" data-lang="headerNavLinkRings">
 							Rings
 						</a>
 					</li>
 					<li class="header__nav-item">
-						<a class="header__nav-link" href="#" id="lang-headerNavLinkEarrings">
+						<a class="header__nav-link" href="#" data-lang="headerNavLinkEarrings">
 							Earrings
 						</a>
 					</li>
 					<li class="header__nav-item">
-						<a class="header__nav-link" href="#" id="lang-headerNavLinkBracelets">
+						<a class="header__nav-link" href="#" data-lang="headerNavLinkBracelets">
 							Bracelets
 						</a>
 					</li>
 					<li class="header__nav-item">
-						<a class="header__nav-link" href="#" id="lang-headerNavLinkChains">
+						<a class="header__nav-link" href="#" data-lang="headerNavLinkChains">
 							Chains
 						</a>
 					</li>
@@ -113,11 +114,11 @@
 					<span class="header__hero-discount">50%</span>
 
 					<div class="header__hero-info">
-						<h2 class="header__hero-info-title" data-lang="lang-heroTitleWatch">
+						<h2 class="header__hero-info-title" data-lang="heroTitleWatch">
 							Men's watch
 						</h2>
 						<p class="header__hero-info-brand subtitle-1">Pierre Lannier</p>
-						<p class="header__hero-info-price" data-lang="lang-heroPrice1">
+						<p class="header__hero-info-price" data-lang="heroPrice1">
 							102 USD
 						</p>
 					</div>
@@ -127,13 +128,13 @@
 					<span>20%</span>
 
 					<div class=" header__hero-info">
-					<h2 class="header__hero-info-title" data-lang="lang-heroTitleWatch">
+					<h2 class="header__hero-info-title" data-lang="heroTitleWatch">
 						Men's watch
 					</h2>
 					<p class="header__hero-info-brand subtitle-2">
 						Swiss Military Chrono
 					</p>
-					<p class="header__hero-info-price" data-lang="lang-heroPrice1">
+					<p class="header__hero-info-price" data-lang="heroPrice1">
 						119 USD
 					</p>
 				</div>
@@ -143,11 +144,11 @@
 					<span class="header__hero-discount">50%</span>
 
 					<div class="header__hero-info">
-						<h2 class="header__hero-info-title" data-lang="lang-heroTitleEarring">
+						<h2 class="header__hero-info-title" data-lang="heroTitleEarring">
 							Black men's earring
 						</h2>
 						<p class="header__hero-info-brand subtitle-3">Diadema Grand</p>
-						<p class="header__hero-info-price" data-lang="lang-heroPrice1">7 USD</p>
+						<p class="header__hero-info-price" data-lang="heroPrice1">7 USD</p>
 					</div>
 				</div>
 			</div>
@@ -186,18 +187,18 @@
 			</ul>
 
 			<div class="hidden-header__wrapper">
-				<button class="hidden-header__wrapper-btn">
+				<button class="hidden-header__wrapper-btn favourite__modal-open">
 					<i class="fa-regular fa-heart fa-xl"></i>
+					<span class="header__wrapper-favourite-count">0</span>
 				</button>
-				<button class="hidden-header__wrapper-btn">
-					<i class="fa-solid fa-cart-shopping fa-xl"></i>
-				</button>
-				<button class="hidden-header__wrapper-btn">
-					<i class="fa-regular fa-user fa-xl"></i>
-				</button>
-				<button class="hidden-header__wrapper-btn">
-					<i class="fa-solid fa-magnifying-glass fa-xl"></i>
-				</button>
+				<button class="hidden-header__wrapper-btn cart__modal-open">
+					<i class="fa-solid fa-cart-shopping fa-xl "></i>
+					<button class="hidden-header__wrapper-btn">
+						<i class="fa-regular fa-user fa-xl"></i>
+					</button>
+					<button class="hidden-header__wrapper-btn">
+						<i class="fa-solid fa-magnifying-glass fa-xl"></i>
+					</button>
 			</div>
 		</div>
 		</div>
@@ -364,7 +365,7 @@
 									Men's ring
 								</h3>
 								<h4 class="product__info-brand">Spikes</h4>
-								<p class="product__info-price" id="lang-productInfoPrice6">
+								<p class="product__info-price" data-lang="productInfoPrice6">
 									115 USD
 								</p>
 							</div>
@@ -565,7 +566,7 @@
 							<h3 class="news__blog-title" data-lang="newsBlogTitle1">
 								HAIQIN Men's Luxury Mechanical Watches
 							</h3>
-							<p class="news__blog-desc" da data-lang-lnewsBlogDescription">
+							<p class="news__blog-desc" data-lang="lnewsBlogDescription">
 								Waterproof tourbillon watch men's automatic watch - buy online
 								with decent worldwide delivery!
 							</p>
@@ -643,7 +644,7 @@
 
 					<ul class="footer__list">
 						<li class="footer__item">
-							<address class="footer__address" id="lang-footerAddress">
+							<address class="footer__address" data-lang="footerAddress">
 								St. Askiya, Yakkasaray district, Tashkent, Uzbekistan
 							</address>
 						</li>
@@ -667,7 +668,7 @@
 					</ul>
 
 					<div class="footer__socials">
-						<h3 class="footer__socials-title" id="lang-footerSocialsTitle">Socials Media</h3>
+						<h3 class="footer__socials-title" data-lang="footerSocialsTitle">Socials Media</h3>
 
 						<ul class="footer__socials-list">
 							<li class="foooter__socials-item">
